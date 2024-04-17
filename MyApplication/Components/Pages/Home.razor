@@ -1,0 +1,24 @@
+﻿@page "/"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+<FluentCard Style="width: 200px; height: 200px;">
+    <h3>Hello</h3>
+</FluentCard>
+<FluentCard Style="margin: 16px 0; padding: 16px; width: 1000px; height: 500px;">
+    <FluentDatePicker Label="Date1" />
+    <FluentTabs ActiveTabId="tab-1">
+        <FluentTab Label="Tab-1" Id="tab-1">
+            <FluentDatePicker Label="Date2"/>
+        </FluentTab>
+        <FluentTab Label="Tab-2" Id="tab-2">
+            <div>
+                <strong>Select</strong>
+                <FluentRadioGroup TValue="string">
+                    <FluentRadio Value="@("One")">One</FluentRadio>
+                    <FluentRadio Value="@("Two")">Two</FluentRadio>
+                </FluentRadioGroup>
+                <FluentDatePicker Label="Date3"/>
+            </div>
+        </FluentTab>
+    </FluentTabs>
+</FluentCard>
